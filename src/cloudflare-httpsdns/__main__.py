@@ -143,7 +143,7 @@ async def run_server(host, port):
         local_addr=(host, port),
     )
     
-    asyncio.create_task(clean_cache(protocol))
+    loop.create_task(clean_cache(protocol))
     
     print('Starting server on', f'{host}:{port}')
     run_forever = loop.create_future()
