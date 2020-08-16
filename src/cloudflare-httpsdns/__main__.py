@@ -200,7 +200,7 @@ def run(host='127.0.0.1', port=5353, priv_port=53):
                 asyncio.run(run_server(host, priv_port))
         else:
             print('Running as non-privileged user. '
-                  'An external DNS server will be required'
+                  'An external DNS server will be required '
                   'to look up cloudflare-dns.com.')
             asyncio.run(run_server(host, port))
     except KeyboardInterrupt:
